@@ -19,5 +19,8 @@ csvReader = csv.reader(open('census.csv'), delimiter=',', quotechar='"')
 for row in csvReader:
         conn.execute('insert into census_2 (state, sex, age, pop2000, pop2008) values (?, ?, ?, ?, ?)', row)
 
+# store the table
+conn.commit()
+
 cursor.execute('SELECT * FROM census_2')
 print(cursor.fetchall())
