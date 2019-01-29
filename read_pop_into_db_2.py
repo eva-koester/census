@@ -21,5 +21,8 @@ for row in csvReader:
         conn.execute('insert into population (pop_id, country_code, year, fertility_rate,'
                      'life_expectancy, size) values (?, ?, ?, ?, ?, ?)', row)
 
+#store the table
+conn.commit()
+
 cursor.execute('SELECT * FROM population')
 print(cursor.fetchall())
