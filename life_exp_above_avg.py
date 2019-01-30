@@ -11,4 +11,3 @@ cursor.execute('SELECT COUNT(*) FROM population WHERE life_expectancy > 1.15 * (
                'SELECT AVG(life_expectancy) FROM population WHERE year = 2010) AND year = 2010')
 
 print(cursor.fetchall())
-
