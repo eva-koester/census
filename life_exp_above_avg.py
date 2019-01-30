@@ -1,4 +1,4 @@
-# countries that had high average life expectancies (at the country level) in 2015.
+# determine average life exp in 2010 and count no of countries with an expectancy above
 import sqlite3
 conn = sqlite3.connect('census_2.db')
 cursor = conn.cursor()
